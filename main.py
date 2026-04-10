@@ -9,7 +9,7 @@ def main():
     sistema.cadastrar_usuario("maria", "maria@institucional.edu", "adm456", "funcionario")
 
     print("\n--- Teste de Login ---")
-    user_usuario = input("Digite seu e-mail institucional: ")
+    user_usuario = input("Digite seu nome de usuário: ")
     user_senha = input("Digite sua senha: ")
 
     sessao_ativa = sistema.realizar_login(user_usuario, user_senha)

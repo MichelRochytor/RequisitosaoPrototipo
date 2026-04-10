@@ -18,10 +18,10 @@ class GerenciadorUsuarios:
                 escritor.writerow(self.cabecalho)
 
     def cadastrar_usuario(self, username, email, senha, tipo):
-        """Registra um novo usuário no sistema, validando se o email já existe."""
+        """Registra um novo usuário no sistema, validando se o username já existe."""
         # Verifica duplicidade antes de cadastrar
-        if self._buscar_por_email(email):
-            print(f"Erro: O e-mail {email} já está cadastrado.")
+        if self._buscar_por_usuario(username):
+            print(f"Erro: O nome de usuário {username} já está em uso.")
             return
 
         novo_usuario = Usuario(username, email, senha, tipo)
@@ -45,13 +45,13 @@ class GerenciadorUsuarios:
         return None
 
     def _buscar_por_usuario(self, nome):
-        """Método auxiliar para ler o CSV e encontrar um registro por email."""
+        """Método auxiliar para ler o CSV e encontrar um registro por nome de usuário."""
         if not os.path.exists(self.arquivo_db):
             return None
             
         with open(self.arquivo_db, mode='r', encoding='utf-8') as f:
             leitor = csv.DictReader(f)
             for linha in leitor:
-                if linha['email'] == nome:
+                if linha['username'] == nome:
                     return linha
         return None

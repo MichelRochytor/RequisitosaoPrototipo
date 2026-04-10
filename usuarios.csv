@@ -1,5 +1,3 @@
 id,username,email,senha,tipo
-ac1e092d,João Aluno,joao@institucional.edu,123,aluno
-8a35e27e,Maria Func,maria@institucional.edu,adm456,funcionario
-8ac8b105,João Aluno,pinto,123,aluno
-6c57dbe8,joao,joao@alunos.com,123,aluno
+a1282877,joao,joao@alunos.com,123,aluno
+eab1fb20,maria,maria@institucional.edu,adm456,funcionario

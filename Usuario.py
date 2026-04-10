@@ -17,5 +17,3 @@ class Usuario:
         """Converte o objeto para uma lista compatível com a escrita em CSV."""
         return [self.id, self.username, self.email, self.senha, self.tipo]
 
-
-

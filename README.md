@@ -46,3 +46,5 @@ app.py
 gestao_vagas.py
 login.py
 reporte.py
+
+AI Joao: https://claude.ai/share/03248c9e-e325-4196-8524-a92850cd902f
